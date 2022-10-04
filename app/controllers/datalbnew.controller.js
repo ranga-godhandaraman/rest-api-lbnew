@@ -1,11 +1,11 @@
 const db = require("../models");
-const Datalbnew = db.lbnew; // DB name --ranga
+const Datalbnew = db.datalbnew; // DB name --ranga
 const Op = db.Sequelize.Op;
 
 // Create and Save
 exports.create = (req, res) => {
   // Validate request
-  if (!req.body.title) {
+  if (!req.body.studyid) {
     res.status(400).send({
       message: "Content can not be empty!"
     });
@@ -32,7 +32,7 @@ exports.create = (req, res) => {
   };
 
   // Save data in db
-  datalbnew.create(dm)
+  Datalbnew.create(datalbnew)
     .then(data => {
       res.send(data);
     })

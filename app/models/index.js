@@ -18,6 +18,6 @@ const db = {};
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
-db.data = require("./datalbnew.model.js")(sequelize, Sequelize);
+db.datalbnew = require("./datalbnew.model.js")(sequelize, Sequelize);
 
 module.exports = db;
